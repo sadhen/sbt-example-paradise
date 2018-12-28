@@ -1,8 +1,8 @@
 val paradiseVersion = "2.1.0"
 
 lazy val commonSettings = Seq(
-  scalaVersion := "2.12.8",
-  addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full)
+  scalaVersion := "2.13.0-M5",
+  scalacOptions ++= Seq("-Ymacro-annotations")
 )
 
 lazy val root = (project in file("."))
