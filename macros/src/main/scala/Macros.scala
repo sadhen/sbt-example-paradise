@@ -5,7 +5,6 @@ import scala.annotation.StaticAnnotation
 object helloMacro {
   def impl(c: blackbox.Context)(annottees: c.Expr[Any]*): c.Expr[Any] = {
     import c.universe._
-    import Flag._
     val result = {
       annottees.map(_.tree).toList match {
         case q"object $name extends ..$parents { ..$body }" :: Nil =>

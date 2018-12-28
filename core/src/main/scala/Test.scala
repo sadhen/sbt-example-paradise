@@ -1,3 +1,4 @@
+@hello
 object Test extends App {
-  println(this)
+  println(this.hello)
 }
